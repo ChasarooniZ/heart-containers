@@ -24,7 +24,7 @@ class HeartContainers extends Application {
    * @returns {Actor}     The user's assigned actor.
    */
   get actor() {
-    return this.user.character;
+    return canvas?.tokens?.controlled?.[0] ?? this.user.character;
   }
 
   /** @override */
